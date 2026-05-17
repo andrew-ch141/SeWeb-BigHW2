@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${book.title}">Book</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<header th:replace="~{fragments :: header}"></header>
+<main class="container">
+    <article class="card detail-card">
+        <h1 th:text="${book.title}">Dune</h1>
+        <p>Author: <strong th:text="${book.author}">Frank Herbert</strong></p>
+        <p>Reading level: <strong th:text="${book.readingLevel}">Advanced</strong></p>
+        <p>Themes: <span th:text="${#strings.listJoin(book.themes, ', ')}">Science Fiction, Fantasy</span></p>
+        <a class="button" th:href="@{/books/{id}/edit(id=${book.id})}">Edit Book</a>
+    </article>
+</main>
+<section th:replace="~{fragments :: chat}"></section>
+<script src="/js/chat.js"></script>
+</body>
+</html>

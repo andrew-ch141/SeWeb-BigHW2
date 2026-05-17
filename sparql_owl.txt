@@ -1,0 +1,62 @@
+# sparql_owl.txt
+
+# Query 1 - List every book with author and reading level.
+PREFIX book: <http://example.org/books#>
+SELECT ?book ?title ?author ?level
+WHERE {
+  ?book a book:Book ;
+        book:title ?title ;
+        book:author ?author ;
+        book:readingLevel ?level .
+}
+
+---
+
+# Query 2 - Find books that have the Science Fiction theme.
+PREFIX book: <http://example.org/books#>
+SELECT ?title ?author
+WHERE {
+  ?book book:hasTheme book:ScienceFiction .
+  ?book book:title ?title .
+  ?book book:author ?author .
+}
+
+---
+
+# Query 3 - Find users and their preferred themes.
+PREFIX book: <http://example.org/books#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?userName ?themeName ?level
+WHERE {
+  ?user a book:User ;
+        rdfs:label ?userName ;
+        book:readingLevel ?level ;
+        book:prefersTheme ?theme .
+  ?theme rdfs:label ?themeName .
+}
+
+---
+
+# Query 4 - Find a book by author and theme. This should return Dune.
+PREFIX book: <http://example.org/books#>
+SELECT ?title ?author
+WHERE {
+  book:Dune book:title ?title .
+  book:Dune book:author ?author .
+}
+
+---
+
+# Query 5 - Recommend books by matching user reading level.
+PREFIX book: <http://example.org/books#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?userName ?bookTitle ?level
+WHERE {
+  ?user a book:User ;
+        rdfs:label ?userName ;
+        book:readingLevel ?level .
+
+  ?book a book:Book ;
+        book:title ?bookTitle ;
+        book:readingLevel ?level .
+}

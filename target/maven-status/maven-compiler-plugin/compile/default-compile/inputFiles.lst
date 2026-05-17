@@ -1,0 +1,17 @@
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\BookRecommendationApplication.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\config\AppProperties.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\controller\BookController.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\controller\ChatController.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\controller\GraphController.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\controller\HomeController.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\model\Book.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\model\ChatRequest.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\model\ChatResponse.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\model\RagDocument.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\model\TripleView.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\model\UserProfile.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\service\ChatService.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\service\ElasticsearchVectorService.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\service\OpenAiCompatibleClient.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\service\RagDocumentService.java
+C:\Cursor\AN4\sem2\SeWeb\bighw2\src\main\java\ro\semanticweb\bookhomework\service\RdfBookService.java

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Form</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<header th:replace="~{fragments :: header}"></header>
+<main class="container narrow">
+    <h1>Book RDF Form</h1>
+    <p>Use this page to add Harry Potter or edit Hunger Games reading level.</p>
+
+    <form class="form-card" method="post" action="/books" th:object="${book}">
+        <label>
+            RDF id
+            <input th:field="*{id}" placeholder="HarryPotter">
+        </label>
+        <label>
+            Title
+            <input th:field="*{title}" required placeholder="Harry Potter">
+        </label>
+        <label>
+            Author
+            <input th:field="*{author}" required placeholder="J. K. Rowling">
+        </label>
+        <label>
+            Reading level
+            <select th:field="*{readingLevel}">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+        </label>
+        <label>
+            Themes, separated by commas
+            <input name="themeText" th:value="${themeText}" placeholder="Fantasy, Magic">
+        </label>
+        <button type="submit">Save To RDF/XML</button>
+    </form>
+</main>
+<section th:replace="~{fragments :: chat}"></section>
+<script src="/js/chat.js"></script>
+</body>
+</html>

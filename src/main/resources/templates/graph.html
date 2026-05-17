@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>RDF Graph</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <script src="https://unpkg.com/cytoscape@3.30.4/dist/cytoscape.min.js"></script>
+</head>
+<body>
+<header th:replace="~{fragments :: header}"></header>
+<main class="container">
+    <h1>RDF/XML Graph Visualization</h1>
+    <p>Upload the RDF/XML from exercise 1, or view the current project RDF file.</p>
+
+    <form id="rdf-upload-form" class="form-card">
+        <label>
+            RDF/XML file
+            <input id="rdf-file" type="file" name="file" accept=".rdf,.xml,application/rdf+xml,text/xml">
+        </label>
+        <button type="submit">Upload And Visualize</button>
+        <button id="load-current" type="button">Load Current RDF</button>
+    </form>
+
+    <div id="graph-status" class="notice"></div>
+    <div id="rdf-graph"></div>
+</main>
+<section th:replace="~{fragments :: chat}"></section>
+<script src="/js/graph.js"></script>
+<script src="/js/chat.js"></script>
+</body>
+</html>

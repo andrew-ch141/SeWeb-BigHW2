@@ -1,0 +1,56 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:book="http://example.org/books#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <book:Book rdf:about="http://example.org/books#1">
+    <book:theme>Magie</book:theme>
+    <book:readingLevel>Beginner</book:readingLevel>
+    <book:author>Stefan</book:author>
+    <rdfs:label>Lupul cu 3 iezi</rdfs:label>
+  </book:Book>
+  <book:Book rdf:about="http://example.org/books#HungerGames">
+    <rdfs:label>Hunger Games</rdfs:label>
+    <book:author>Suzanne Collins</book:author>
+    <book:theme>Science Fiction</book:theme>
+    <book:theme>Fantasy</book:theme>
+    <book:readingLevel>Beginner</book:readingLevel>
+  </book:Book>
+  <book:Book rdf:about="http://example.org/books#TheSilentPatient">
+    <rdfs:label>The Silent Patient</rdfs:label>
+    <book:author>Alex Michaelides</book:author>
+    <book:theme>Mystery</book:theme>
+    <book:theme>Murder</book:theme>
+    <book:readingLevel>Intermediate</book:readingLevel>
+  </book:Book>
+  <book:User rdf:about="http://example.org/books#Bob">
+    <rdfs:label>Bob</rdfs:label>
+    <book:readingLevel>Beginner</book:readingLevel>
+    <book:prefersTheme>Mystery</book:prefersTheme>
+  </book:User>
+  <book:Book rdf:about="http://example.org/books#test">
+    <rdfs:label>test</rdfs:label>
+    <book:author>test</book:author>
+    <book:readingLevel>Intermediate</book:readingLevel>
+    <book:theme>test</book:theme>
+  </book:Book>
+  <book:User rdf:about="http://example.org/books#Alice">
+    <rdfs:label>Alice</rdfs:label>
+    <book:readingLevel>Intermediate</book:readingLevel>
+    <book:prefersTheme>Science Fiction</book:prefersTheme>
+  </book:User>
+  <book:Book rdf:about="http://example.org/books#Dune">
+    <rdfs:label>Dune</rdfs:label>
+    <book:author>Frank Herbert</book:author>
+    <book:readingLevel>Advanced</book:readingLevel>
+    <book:theme>Fantasy</book:theme>
+    <book:theme>Science Fiction</book:theme>
+    <book:theme>Romance</book:theme>
+  </book:Book>
+  <book:Book rdf:about="http://example.org/books#HarryPotter">
+    <book:theme>Magic</book:theme>
+    <book:theme>Fantasy</book:theme>
+    <book:readingLevel>Beginner</book:readingLevel>
+    <book:author>J. K. Rowling</book:author>
+    <rdfs:label>Harry Potter</rdfs:label>
+  </book:Book>
+</rdf:RDF>

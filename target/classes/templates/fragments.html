@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header">
+    <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/books">Books</a>
+        <a href="/books/new">Add Book</a>
+        <a href="/graph">RDF Graph</a>
+    </nav>
+</header>
+
+<section th:fragment="chat">
+    <div id="chat-widget" class="chat-widget"
+         th:attr="data-page-type=${pageType},data-book-id=${bookId}">
+        <button id="chat-toggle" class="chat-toggle">Book Chat</button>
+        <div id="chat-panel" class="chat-panel hidden">
+            <div class="chat-header">RAG Book Assistant</div>
+            <div id="chat-starters" class="chat-starters"></div>
+            <div id="chat-messages" class="chat-messages"></div>
+            <form id="chat-form" class="chat-form">
+                <input id="chat-input" type="text" placeholder="Ask about books, authors, themes..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>

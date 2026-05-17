@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic Book Recommendations</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<header th:replace="~{fragments :: header}"></header>
+<main class="container">
+    <section class="hero">
+        <h1>Semantic Book Recommendation System</h1>
+        <p>This app uses RDF/XML, OWL, SPARQL, Apache Jena, Elasticsearch, and RAG.</p>
+        <p><strong th:text="${bookCount}">0</strong> books are loaded from the RDF/XML file.</p>
+    </section>
+
+    <section class="card-grid">
+        <article class="card" th:each="user : ${users}">
+            <h2 th:text="${user.name}">Alice</h2>
+            <p>Reading level: <strong th:text="${user.readingLevel}">Intermediate</strong></p>
+            <p>Preferred themes: <span th:text="${#strings.listJoin(user.preferredThemes, ', ')}">Science Fiction</span></p>
+        </article>
+    </section>
+
+    <section class="card">
+        <h2>Vector Database</h2>
+        <p>Rebuild the Elasticsearch vector index after changing RDF book or user data.</p>
+        <button id="rebuild-index" type="button">Rebuild Vector Index</button>
+        <p id="index-status" class="notice"></p>
+    </section>
+</main>
+<section th:replace="~{fragments :: chat}"></section>
+<script src="/js/index.js"></script>
+<script src="/js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<header th:replace="~{fragments :: header}"></header>
+<main class="container">
+    <div class="page-title">
+        <h1>Available Books</h1>
+        <div class="actions">
+            <a class="button" href="/books/new">Add Book</a>
+            <form method="post" action="/books/seed-harry-potter">
+                <button type="submit">Add Harry Potter Test Book</button>
+            </form>
+        </div>
+    </div>
+
+    <p class="notice" th:if="${message}" th:text="${message}"></p>
+
+    <section class="card-grid">
+        <article class="card" th:each="book : ${books}">
+            <h2><a th:href="@{/books/{id}(id=${book.id})}" th:text="${book.title}">Dune</a></h2>
+            <p>Author: <strong th:text="${book.author}">Frank Herbert</strong></p>
+            <p>Reading level: <span th:text="${book.readingLevel}">Advanced</span></p>
+            <p>Themes: <span th:text="${#strings.listJoin(book.themes, ', ')}">Science Fiction</span></p>
+        </article>
+    </section>
+</main>
+<section th:replace="~{fragments :: chat}"></section>
+<script src="/js/chat.js"></script>
+</body>
+</html>
